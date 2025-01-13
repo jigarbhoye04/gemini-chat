@@ -25,12 +25,12 @@ export default function GeminiChat() {
    } = useGeminiChat();
 
    return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
-         <Card className="w-full max-w-5xl">
+      <div className="flex items-center justify-center min-h-screen bg-neutral-100">
+         <Card className="w-full max-w-6xl h-full flex flex-col">
             <CardHeader>
                <CardTitle>Gemini AI Chat</CardTitle>
             </CardHeader>
-            <CardContent className="h-[60vh] overflow-y-auto">
+            <CardContent className="h-[70vh] overflow-y-auto">
                {error && (
                   <Alert variant="destructive" className="mb-4">
                      <AlertCircle className="h-4 w-4" />
@@ -49,7 +49,7 @@ export default function GeminiChat() {
                         className={`inline-block p-2 rounded-lg ${
                            m.role === "user"
                               ? "bg-blue-500 text-white"
-                              : "bg-gray-200 text-black"
+                              : "bg-gray-200 text-black max-w-3xl"
                         }`}
                      >
                         {m.role === "user" ? (

@@ -72,6 +72,7 @@ export function useGeminiChat() {
     }
   };
 
+  const addBotMessage = "Hello! I'm Gemini, your personal assistant. Ask me anything!";
   return {
     messages,
     input,
@@ -79,6 +80,7 @@ export function useGeminiChat() {
     error,
     handleInputChange,
     handleSubmit,
+    addBotMessage,
   };
 }
 
