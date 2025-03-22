@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Gemini Chat',
-  description: 'chat app',
+  title: 'vibe check ✨ | powered by gemini',
+  description: 'chat app for the coolest girlies and besties',
   icons: '/cc.jpg',
 }
 

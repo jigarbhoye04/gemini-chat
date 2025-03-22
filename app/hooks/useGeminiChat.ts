@@ -45,34 +45,34 @@ export function useGeminiChat() {
         const data = await response.json();
         
         if (!response.ok) {
-          throw new Error(data.error || `HTTP error! status: ${response.status}`);
+          throw new Error(data.error || `yikes, error ${response.status}! not the vibe...`);
         }
 
         if (!data.text) {
-          throw new Error('Invalid response from server');
+          throw new Error('bestie the response is giving empty vibes');
         }
 
         const assistantMessage: Message = {
           id: Date.now(),
           role: 'assistant',
-          content: data.text, // This is now Markdown content
+          content: data.text,
         };
 
         setMessages((prevMessages) => [...prevMessages, assistantMessage]);
       } else {
         // If the response is not JSON, treat it as text
         const text = await response.text();
-        throw new Error(`Unexpected response: ${text}`);
+        throw new Error(`unexpected response: ${text} (that's so random)"`);
       }
     } catch (error) {
       console.error('Error in handleSubmit:', error);
-      setError(error instanceof Error ? error.message : 'An unknown error occurred');
+      setError(error instanceof Error ? error.message : 'something broke, and I\'m literally crying rn');
     } finally {
       setIsLoading(false);
     }
   };
 
-  const addBotMessage = "Hello! I'm Gemini, your personal assistant. Ask me anything!";
+  const addBotMessage = "hey bestie! ✨ I'm here for all the vibes and hot takes. what's on your mind?";
   return {
     messages,
     input,
