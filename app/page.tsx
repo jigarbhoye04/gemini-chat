@@ -11,7 +11,7 @@ import {
    CardTitle,
 } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { AlertCircle, CircleArrowRight, LeafyGreen } from "lucide-react";
+import { AlertCircle, CircleArrowRight } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
 export default function GeminiChat() {
@@ -66,7 +66,7 @@ export default function GeminiChat() {
                      <span
                         className={`inline-block p-2 rounded-lg ${
                            m.role === "user"
-                              ? "bg-blue-500 text-white max-w-3xl"
+                              ? "bg-blue-500 text-white max-w-3xl flex-wrap"
                               : "bg-gray-200 text-black max-w-3xl"
                         }`}
                      >

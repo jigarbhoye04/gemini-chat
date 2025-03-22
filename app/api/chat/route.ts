@@ -39,7 +39,7 @@ const gemini_config = {
 };
 
 const geminiModel = googleAI.getGenerativeModel({
-   model: "gemini-pro",
+   model: "gemini-2.0-flash",
    generationConfig: gemini_config,
    safetySettings: safetySettings,
 });
